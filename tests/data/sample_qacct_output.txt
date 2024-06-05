@@ -1,0 +1,54 @@
+==============================================================
+qname        gpu                 
+hostname     hostname               
+group        groupname            
+owner        username          
+project      groupname            
+department   groupname            
+jobname      test.sh             
+jobnumber    00000001            
+taskid       undefined
+pe_taskid    NONE                
+account      groupname            
+priority     0                   
+cwd          NONE                
+submit_host  submit_host                 
+submit_cmd   /home/system/uge/latest/bin/lx-amd64/qsub -P groupname -l rt_F=1 test.sh
+qsub_time    11/20/2023 14:59:21.269
+start_time   11/20/2023 14:59:40.791
+end_time     11/20/2023 14:59:50.826
+granted_pe   perack09            
+slots        80                  
+failed       0    
+deleted_by   NONE
+exit_status  199                 
+ru_wallclock 10.035       
+ru_utime     0.018        
+ru_stime     0.015        
+ru_maxrss    8936                
+ru_ixrss     0                   
+ru_ismrss    0                   
+ru_idrss     0                   
+ru_isrss     0                   
+ru_minflt    548                 
+ru_majflt    0                   
+ru_nswap     0                   
+ru_inblock   8                   
+ru_oublock   24                  
+ru_msgsnd    0                   
+ru_msgrcv    0                   
+ru_nsignals  0                   
+ru_nvcsw     14                  
+ru_nivcsw    1                   
+wallclock    51.494       
+cpu          0.033        
+mem          0.000             
+io           0.001             
+iow          0.000             
+ioops        304                 
+maxvmem      19.578M
+maxrss       0.000
+maxpss       0.000
+arid         undefined
+jc_name      NONE
+bound_cores  NONE

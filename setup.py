@@ -1,4 +1,5 @@
 # Copyright 2021 Agnostiq Inc.
+# Copyright 2024 National Institute of Advanced Industrial Science and Technology.
 #
 # This file is part of Covalent.
 #
@@ -21,46 +22,37 @@ from setuptools import find_packages, setup
 
 site.ENABLE_USER_SITE = "--user" in sys.argv[1:]
 
-# When updating, VERSION should be set to that of the latest
-# covalent-executor-template (ie, this package).
 with open("VERSION") as f:
     version = f.read().strip()
 
 with open("requirements.txt") as f:
     required = f.read().splitlines()
 
-# Modify this to be the name of your plugin file. Here, "covalent_executor_template"
-# is the name of the directory the plugin is in. "custom" is name of the module.
-plugins_list = [
-    "custom = covalent_executor_template.custom",
-    "custom_async = covalent_executor_template.custom_async",
-]
+plugins_list = ["gridengine = covalent_gridengine_plugin.gridengine"]
 
 setup_info = {
-    # Your plugin should use the naming convention 'covalent-abcdef-plugin'
-    "name": "covalent-executor-template",
+    "name": "covalent-gridengine-plugin",
     "packages": find_packages("."),
     "version": version,
-    # Modify any contact information as you see fit
-    "maintainer": "Agnostiq",
-    "url": "https://github.com/AgnostiqHQ/covalent-executor-template",
-    "download_url": f"https://github.com/AgnostiqHQ/covalent-executor-template/archive/v{version}.tar.gz",
-    "license": "Apache License 2.0",
-    "author": "Agnostiq",
-    "author_email": "support@agnostiq.ai",
-    "description": "Covalent Custom Executor Plugin",
+    # "maintainer": "",
+    # "url": "",
+    # "download_url": "",
+    # "license": "",
+    # "author": "",
+    # "author_email": "",
+    "description": "Covalent Grid Engine Plugin",
     "long_description": open("README.md").read(),
     "long_description_content_type": "text/markdown",
     "include_package_data": True,
     "install_requires": required,
     "classifiers": [
-        "Development Status :: 3 - Alpha",
+        "Development Status :: 4 - Beta",
         "Environment :: Console",
         "Environment :: Plugins",
         "Intended Audience :: Developers",
         "Intended Audience :: Education",
         "Intended Audience :: Science/Research",
-        "License :: OSI Approved :: Apache Software License",
+        # "License :: OSI Approved :: Apache Software License",
         "Natural Language :: English",
         "Operating System :: MacOS",
         "Operating System :: POSIX :: Linux",
@@ -68,6 +60,7 @@ setup_info = {
         "Programming Language :: Python :: 3 :: Only",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
         "Topic :: Adaptive Technologies",
         "Topic :: Scientific/Engineering",
         "Topic :: Scientific/Engineering :: Interface Engine/Protocol Translator",

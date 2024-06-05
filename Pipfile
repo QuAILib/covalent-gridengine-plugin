@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+covalent-gridengine-plugin = {path = ".", editable = true}
+ipykernel = "*"
+
+[dev-packages]
+isort = "*"
+flake8 = "*"
+black = "*"
+pytest = "*"
+pytest-cov = "*"
+pytest-mock = "*"
+pytest-asyncio = "*"
+pytest-html = "*"
+mock = "*"
+
+[requires]
+python_version = "3.10"

@@ -15,9 +15,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Include any dependencies for the plugin in this file.
-aiofiles>=0.8.0
-asyncssh[bcrypt]>=2.14.2
-cloudpickle>=2.0.0
-covalent>=0.232.0,<1
-defusedxml>=0.8.0rc1
+from .gridengine import GridEngineExecutor
